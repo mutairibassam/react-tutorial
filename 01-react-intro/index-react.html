@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- 
+    # install the React and ReactDOM scripts from CDN website
+
+    https://reactjs.org/docs/cdn-links.html
+
+    # development
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    # production
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+    - To load a specific version of react and react-dom, replace 17 with the version number.
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="root">
+        <!-- allocate a place -->
+    </div>
+
+    <script>
+
+        // React.createElement(type, {props}, [...children])
+        /*
+            type -> "h1"
+            props -> id: "root"
+            children -> "React"
+        */
+
+        const element = React.createElement("h1", {id:"root"}, "React")
+        const container = document.getElementById("root")
+
+        ReactDOM.render(element, container)
+
+    </script>
+
+</body>
+</html>
