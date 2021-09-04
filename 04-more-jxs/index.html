@@ -20,7 +20,11 @@
     <script type="text/babel">
     
     const numbers = [1,2,3,4]
-    const numLst = numbers.map( (number) => <li> {number} </li> )
+
+    // passing the index to provide unique value for each list
+    const numLst = numbers.map( (number, index) => 
+        <li key={`number-${index}`}> {number} </li>
+    )
 
 
     const container = document.getElementById('list')
