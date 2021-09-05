@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- required pkgs -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="header">
+    </div>
+
+    <div id="body">
+    </div>
+
+    <div id="footer">
+    </div>
+
+    <div id="root">
+
+    </div>
+
+    <script type="text/babel">
+
+    /**
+     * 
+     * @component helps us to divide our webpage into different sections 
+     * also it supports code reusability
+     * 
+     * component takes input and return one react element
+     * 
+     */
+
+    // Header component
+    
+    function Header(props) {
+        return (
+            <div className="header">
+                <h1>Header</h1>
+            </div>
+        )
+    }
+
+    function Body(props) {
+        return (
+            <div className="body">
+                <h1>Body</h1>
+            </div>
+        )
+    }
+
+    function Footer(props) {
+        return (
+            <div className="footer">
+                <h1>Footer</h1>
+            </div>
+        )
+    }
+
+    function App(props) {
+        return (
+            <div className="app">
+                <Header />
+                <Body />
+                <Footer />
+            </div>
+        )
+    }
+
+    const container = document.getElementById("root")
+
+    ReactDOM.render(<App />, container)
+
+    </script>
+    
+</body>
+</html>
