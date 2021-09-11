@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="root">
+    </div>
+
+    <script type="text/babel">
+        /**
+         * 
+         * @component helps us to divide our webpage into different sections 
+         * also it supports code reusability
+         * 
+         * component takes input and return one react element
+         * 
+         */ 
+        
+         /**
+          * 
+          *     function Header(props) {
+          *         return (
+          *             <div className="header">
+          *                 <h1>Header</h1>
+          *             </div>
+          *         )
+          *     }
+          */
+
+          class Header extends React.Component {
+               
+                render() {
+                    return(
+                        <div>
+                            <h1>Class component</h1>
+                        </div>
+                    )
+                }
+          }
+
+          function App() {
+              return (
+                    <div>
+                        <Header />
+                    </div>
+              )
+          }
+
+        const container = document.getElementById("root")
+        ReactDOM.render(<App />, container)
+
+    </script>
+    
+</body>
+</html>
